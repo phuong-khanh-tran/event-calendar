@@ -4,7 +4,7 @@ import { FC, HTMLAttributes } from "react";
 interface EventItem {
     id: string;
     title: string;
-    date: string; // yyyy-MM-dd
+    date: string; // dd/MM/yyyy
 }
 
 interface EventItemProps extends HTMLAttributes<HTMLDivElement> {
@@ -16,10 +16,10 @@ const EventItem: FC<EventItemProps> = (props) => {
     const { item, onDelete, ...rest } = props;
 
     return (
-        <div className="p-0.5 bg-blue-600 text-white text-xs flex items-center justify-between">
-            <div>{item.title}</div>
+        <div className="p-1 bg-blue-500 text-white flex items-center justify-between">
+            <div className="text-xs font-semibold">{item.title}</div>
             <div onClick={() => onDelete(item)}>
-                <img src="./icons/close.svg" width={12} height={12} />
+                <img src="./icons/close-white.svg" width={12} height={12} />
             </div>
         </div>
     );

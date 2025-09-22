@@ -1,5 +1,5 @@
 import Calendar from "@/view/Calendar";
-import Image from "next/image";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Home() {
     return (
